@@ -55,7 +55,7 @@ local function buildBeach()
 		tree.Parent = beachModel
 
 		-- Trunk (Cylinder is rotated)
-		local trunk = createPart({
+		local _trunk = createPart({
 			Name = "Trunk",
 			Shape = Enum.PartType.Cylinder,
 			Size = Vector3.new(15, 2, 2), 
@@ -74,7 +74,7 @@ local function buildBeach()
 				* CFrame.new(3, 0, 0) 
 				* CFrame.Angles(0, 0, math.rad(-20))
 			
-			local leaf = createPart({
+			local _leaf = createPart({
 				Name = "Leaf",
 				Size = Vector3.new(8, 0.5, 3),
 				CFrame = leafCFrame,

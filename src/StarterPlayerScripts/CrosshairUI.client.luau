@@ -1,0 +1,33 @@
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+local screenGui = Instance.new("ScreenGui")
+UserInputService.MouseIconEnabled = false
+screenGui.Name = "CrosshairGui"
+screenGui.ResetOnSpawn = false
+screenGui.IgnoreGuiInset = true
+screenGui.Parent = playerGui
+local crosshair = Instance.new("Frame")
+crosshair.Name = "Crosshair"
+crosshair.Size = UDim2.fromOffset(20, 20)
+crosshair.Position = UDim2.fromScale(0.5, 0.5)
+crosshair.AnchorPoint = Vector2.new(0.5, 0.5)
+crosshair.BackgroundTransparency = 1
+crosshair.Parent = screenGui
+local horizontal = Instance.new("Frame")
+horizontal.Size = UDim2.fromOffset(20, 2)
+horizontal.Position = UDim2.fromScale(0.5, 0.5)
+horizontal.AnchorPoint = Vector2.new(0.5, 0.5)
+horizontal.BackgroundColor3 = Color3.new(1, 1, 1)
+horizontal.BorderSizePixel = 0
+horizontal.Parent = crosshair
+local vertical = Instance.new("Frame")
+vertical.Size = UDim2.fromOffset(2, 20)
+vertical.Position = UDim2.fromScale(0.5, 0.5)
+vertical.AnchorPoint = Vector2.new(0.5, 0.5)
+vertical.BackgroundColor3 = Color3.new(1, 1, 1)
+vertical.BorderSizePixel = 0
+vertical.Parent = crosshair
+print("[CrosshairUI] Crosshair created at screen center")
+
